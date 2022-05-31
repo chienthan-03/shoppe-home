@@ -1,0 +1,318 @@
+.container {
+    background-color: rgb(244,244,244);
+}
+.grid__margin {
+    padding-top: 15px;
+}
+
+.category {
+    z-index: 1;
+    background-color: var(--white-color);
+    border-radius: 2px;
+}
+
+.category-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    /* margin-left: 16px; */
+    padding: 12px 16px;
+    margin-top: 0;
+    color: var(--text-color);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 1px solid rgba(0 ,0 ,0 ,0.1);
+    text-transform: uppercase
+}
+
+
+.category-heading--icon {
+    font-size: 1.9rem;
+}
+    
+.category-list {
+    margin-left: -12px;
+    padding:0 0 20px 40px;
+    border-radius: 3px;
+}
+
+.category-itme__link {
+    position: relative;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    right: 0;
+    color: #333;
+    transition: right linear .2s;
+    
+}
+
+.category-item--active .category-itme__link::before {
+    content: "";
+    position: absolute;
+    border: 6px solid;
+    top: 0;
+    left: -24px;
+    border-color: transparent transparent transparent var(--start-color);
+}
+
+.category-item {
+    position: relative;
+    padding: 14px 0 14px 26px;
+    border-radius: 3px;
+    margin-left: -16px;
+}
+
+.category-item::before{
+    content: "";
+    border-top: 1px solid #E1E1E1;
+    position: absolute;                  
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+ }
+
+.category-item:hover .category-itme__link::before {
+    content: "";
+    position: absolute;
+    border: 6px solid;
+    top: 0;
+    left: -24px;
+    border-color: transparent transparent transparent var(--start-color);
+}
+
+.category-item:active{
+    color: #333;
+
+    /* font-size: 2rem; */
+}
+
+.category-item:hover .category-itme__link{
+    cursor: pointer;
+    color: rgba(51, 51, 51, 0.6);
+    right: -4px;
+}
+
+.category-item:hover {
+    cursor: pointer;
+    background-color: rgb(252, 202, 202);
+}
+
+/* home sort + filter  */
+.home-filter {
+    background-color: rgba(0 ,0 ,0 ,0.05);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 22px;
+    border-radius: 3px;
+}
+
+.home-filter__label {
+    font-size: 0.9rem;
+    margin: 0 12px 0 0;
+}
+
+.btn.home-filter--btn {
+    margin: 0 12px 0 0;
+    min-width: 90px;
+}
+.home-filter__page-current {
+    margin-right: -4px;
+    color: var(--text-color-shoppe);
+}
+
+.home-filter__page-all {
+    margin: 0 5px 0 -4px;
+}
+
+.home-filter__page-btn {
+    padding: 13px;
+    background-color: var(--white-color);
+    margin-left: 1px;
+    color: rgb(72, 72, 72);
+}
+
+.home-filter__page-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.home-filter__page-control {
+    display: flex;
+    flex: 1;
+}
+/*  */
+
+.product--item {
+    z-index: 0;
+    display: block;
+    position: relative;
+    margin:  5px 0;
+    background-color: var(--white-color);
+    border-radius: 0 0 4px 4px;
+    box-shadow:rgba(224, 224, 224, 0.3) 3px 2px 2px;
+    transition: tranform linear .1s;
+}
+
+.product--item:hover {
+    box-shadow:rgb(224 224 224 / 20%) 0px 0px 16px 20px;
+    transform: translateY(-1px);
+
+}
+
+.product--item__img {
+    width: 193.5px;
+    height: 187px;
+    background-image: url(https://shopgelgun.com/wp-content/uploads/2020/09/sung-dan-thach-ak47-5.jpg);
+    /* background-size: contain; */
+    border-bottom: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.product--item__content {
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin: 2px 10px;
+    height: 2.6rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.product--item__price {
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 5px 10px 0 10px;
+    flex-wrap: wrap;
+}
+
+.product--item__price-old {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #666;
+    margin-right: 3px;
+}
+
+.product--item__price-current {
+    color: var(--text-color-shoppe);
+    font-size: 1.2rem;
+}
+
+.product--item__action {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 10px 0px 10px;
+}
+
+.product--item__like {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.icon-heart-fill {
+    display: none;
+    color: var(--text-color-shoppe);
+}
+
+.product--item__like-liked .icon-heart-fill {
+    display: inline-block;
+}
+
+.product--item__like-liked .icon-heart-empty {
+    display: none;
+}
+
+.product-item__rating {
+    font-size: .6rem;
+    color: #666;
+}
+
+.product--item__origin {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 2px 10px;
+    padding-bottom: 10px;
+}
+
+.product--item__brand {
+    color: rgba(102, 102, 102, 0.5);
+
+}
+
+.product--iten__origin--name {
+    color: rgba(102, 102, 102, 0.5);
+
+}
+
+.home-product-item__favourite {
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    height: 16px;
+    padding-right: 4px;
+    color: var(--text-color-shoppe);
+    background-color: currentColor;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.home-product-item__favourite span {
+    color: var(--white-color);
+}
+
+.home-product-item__favourite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+}
+
+.home-product-item__favourite i {
+    color: var(--white-color);
+}
+
+.home-product--item__sale-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40px;
+    height: 36px;
+    background-color: rgba(255, 209, 58, 0.95);
+    font-weight: 600;
+    border-top-right-radius: 1px;
+}
+
+.home-Froduct--item__sale-off-percent {
+    color: rgb(239,93,42);
+}
+
+.home-product--item__sale-off-label {
+    color: var(--white-color);
+}
+
+.home-product--item__sale-off::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 0;
+    border-width:0 20px 6px;
+    border-style: solid;
+    border-color: #333 rgba(255, 209, 58, 0.95) transparent rgba(255, 209, 58, 0.95);
+
+}
+
